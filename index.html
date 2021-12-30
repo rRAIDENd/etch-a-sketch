@@ -10,17 +10,22 @@
 </head>
 <body>
     <div id="container">
-        <h1>Etch-a-Sketch</h1>
-        <div class="grid-container">
+        <div class="header">
+            Etch-a-Sketch
+        </div>
+        <div class="main">
             <div class="controls">
-                <button>9x9</button>
-                <button>16x16</button>
-                <button>32x32</button>
-                <button>64x64</button>
+                <button value="9">9x9</button>
+                <button value="16">16x16</button>
+                <button value="32">32x32</button>
+                <button value="64">64x64</button>
+                <button value="clear">clear</button>
             </div>
             <div id="grid"></div>
         </div>
-        
+        <div class="footer">
+            Copyright &#169 Ridwan 2021
+        </div>
     </div>
 
     <script src="./script.js"></script>

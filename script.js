@@ -1,7 +1,9 @@
-const grid = document.querySelector('#grid');
 
-
-function makeDiv(val){
+function makeDiv(e){
+    const grid = document.querySelector('#grid');
+    clearGrid(grid);
+    let val = (e.target.value);
+    console.log(val)
     for (let i=0; i < val; i++){
         let row = document.createElement('div');
         row.className = 'grid-row';
@@ -15,6 +17,14 @@ function makeDiv(val){
     }
 }
 
-makeDiv(9);
+function clearGrid(parent){
+    while (parent.firstChild){
+        parent.removeChild(parent.firstChild);
+    }
+}
 
-//changed
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) =>{
+    button.addEventListener('click', makeDiv);
+})
