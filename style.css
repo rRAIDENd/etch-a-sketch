@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    margin: 5% auto 3% auto;
+}
+
+.grid-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+    margin-right: 25%;
+    align-items: center;
+    gap: 5vw;
+}
+
+.controls{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    height: 50vh;
+    width: 50vw;
+    flex: 0;
+}
+
+/*Grid styling*/
+#grid{
+    border: 1px solid pink;
+    width: 30em;
+    height: 30em;
+    /* display: grid;
+    grid-template: auto auto auto; */
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-row{
+    border: 1px solid black;
+    border: hidden;
+    display: flex;
+    flex: 1;
+    
+}
+
+.cell{
+    border: 0.5px solid black;
+    flex: 1;
+}
