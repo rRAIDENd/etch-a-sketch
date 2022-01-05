@@ -15,10 +15,11 @@
         </div>
         <div class="main">
             <div class="controls">
-                <button value="16">16x16</button>
-                <button value="32">32x32</button>
-                <button value="64">64x64</button>
-                <button value="clear">clear</button>
+                <label for="grid-size">Enter grid size:</label>
+                <input type="number" name="grid-size" id="grid-size" min="32" max="100">
+                <button value="black-white">black/white</button>
+                <button value="rainbow">rainbow</button>
+                <button value="reset">reset</button>
             </div>
             <div id="grid"></div>
         </div>
