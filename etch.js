@@ -1,8 +1,8 @@
 const container = document.querySelector('#grid');
 const resizeGrid = document.querySelector('.resize');
-const defaultMode = document.querySelector('.black-white');
 const rainbowMode = document.querySelector('.rainbow');
 const resetButton = document.querySelector('.reset');
+
 
 
 function defaultGrid(val = 32){
@@ -40,18 +40,34 @@ function resetGrid(){
 }
 
 function grey(){
-    const c = document.querySelectorAll('.cell');
-
-    c.forEach((cell)=>{
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach((cell)=>{
         cell.addEventListener('mouseover', (e)=>{
-            e.target.style.backgroundColor = 'grey';
+            e.target.style.backgroundColor = 'black';
         })
     });
+}
+
+function rainbow(){
+    const cells = document.querySelectorAll('.cell');
+
+    cells.forEach((cell)=>{
+        cell.addEventListener('mouseover', (e)=>{
+            let red = Math.floor(Math.random() * 256);
+            let green = Math.floor(Math.random() * 256);
+            let blue = Math.floor(Math.random() * 256);
+            e.target.style.setProperty(
+                "background-color",
+                `rgba(${red},${green},${blue})`
+            );
+        } )
+    })
 }
 
 
 resizeGrid.addEventListener('click', updateGrid);
 resetButton.addEventListener('click', resetGrid)
+rainbowMode.addEventListener('click', rainbow)
 
 
 
